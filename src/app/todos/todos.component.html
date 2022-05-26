@@ -38,25 +38,10 @@
   <div class="container">
 
       <div class="todos-list">
-          <div class="todo-item" *ngFor="let todo of todos" [class.completed]="todo.completed">
-              <div class="check-box">
-                  <i class="material-icons">check</i>
-              </div>
 
-              <div class="todo-text">
-                  {{ todo.text }}
-              </div>
-              <div class="todo-controls-box">
-                  <div class="todo-control-button">
-                      <i class="material-icons">edit</i>
-                  </div>
+        <app-todo-item *ngFor="let todo of todos" [todo]="todo"></app-todo-item>
 
-                  <div class="todo-control-button is-danger">
-                      <i class="material-icons">delete</i>
-                  </div>
-              </div>
-          </div>
-
-      </div>
+       
+  </div>
   </div>
 </section>
