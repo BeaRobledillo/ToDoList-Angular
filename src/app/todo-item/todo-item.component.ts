@@ -10,14 +10,22 @@ import { Todo } from '../shared/todo.model';
 export class TodoItemComponent implements OnInit{
 
   @Input() todo: Todo
+
   @Output() todoClicked: EventEmitter<void> = new EventEmitter()
   @Output() editClicked: EventEmitter<void> = new EventEmitter()
   @Output() deleteClicked: EventEmitter<void> = new EventEmitter()
 
+  test:string='Default Value';
+
   constructor() { }
 
   ngOnInit(): void {
+    this.test='New Value'
+    setTimeout(() => {
+
+    },1000)
   }
+
 
   onTodoClicked(){
     //console.log("Todo was clicked")
@@ -27,7 +35,6 @@ export class TodoItemComponent implements OnInit{
     this.editClicked.emit()
   }
 
-  
   onDeleteClicked(){
 
     this.deleteClicked.emit()
