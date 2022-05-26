@@ -39,9 +39,10 @@
 
       <div class="todos-list">
 
-        <app-todo-item *ngFor="let todo of todos" 
+        <app-todo-item *ngFor="let todo of todos; index as i" 
         [todo]="todo" 
         (todoClicked)="toggleCompleted(todo)">
+        (editClicked)="editTodo(todo)">
       </app-todo-item>
 
 
