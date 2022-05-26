@@ -1,6 +1,8 @@
 @import '../node_modules/bulma/bulma.sass';
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
-//@import '@angular/material/prebuilt-themes/deep'
+
+@import 'tippy.js/dist/tippy.css';
+
 html, body { height: 100%; }
 body { margin: 0; }
 
