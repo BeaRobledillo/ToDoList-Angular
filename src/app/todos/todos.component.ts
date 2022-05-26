@@ -45,7 +45,6 @@ export class TodosComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-
       if (result){
         this.dataService.updateTodo(index, result)
       }
@@ -53,7 +52,7 @@ export class TodosComponent implements OnInit {
     })
   }
 
-  deleteTodo(todo: Todo){
+  deleteTodo(todo: Todo) {
 
     const index = this.todos.indexOf(todo)
     this.dataService.deleteTodo(index)

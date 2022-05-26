@@ -22,14 +22,16 @@ export class EditTodoDialogComponent implements OnInit {
   }
 
   onFormSubmit(form: NgForm){
-    if(form.invalid) return
+    //this.todo.text= form.value.text;
+    //this.dialogRef.close(this.todo)
+    //if(form.invalid) return
 
-    const updateTodo={
+    const updatedTodo={
       ...this.todo,
       ...form.value
     }
 
-    this.dialogRef.close(updateTodo)
+    this.dialogRef.close(updatedTodo)
 
   }
 
