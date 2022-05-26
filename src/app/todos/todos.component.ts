@@ -31,4 +31,10 @@ export class TodosComponent implements OnInit {
     form.reset()
   }
 
+  toggleCompleted(todo:Todo){
+    //alert("Todo was clicked. This code is being executed in the TODOS component")
+    //set todo to completed
+    todo.completed=!todo.completed;
+  }
+
 }

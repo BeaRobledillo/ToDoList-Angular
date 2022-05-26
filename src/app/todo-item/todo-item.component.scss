@@ -24,11 +24,13 @@
     width: 28px;
     transition: background-color 0.2s, border-color 0.2s;
 
+    
     i.material-icons{
         font-size: 20px;
         opacity: 0;
         color: #333;
         transition: opacity 0.2s;
+
     }
 }
 

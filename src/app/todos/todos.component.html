@@ -39,7 +39,11 @@
 
       <div class="todos-list">
 
-        <app-todo-item *ngFor="let todo of todos" [todo]="todo"></app-todo-item>
+        <app-todo-item *ngFor="let todo of todos" 
+        [todo]="todo" 
+        (todoClicked)="toggleCompleted(todo)">
+      </app-todo-item>
+
 
        
   </div>
