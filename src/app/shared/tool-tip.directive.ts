@@ -8,7 +8,7 @@ export class ToolTipDirective implements AfterViewInit, OnChanges {
 
   @Input('appToolTip') tooltipContent: string;
 
-  tippyInstance: any;
+ public tippyInstance: any;
 
   constructor(private elRef: ElementRef) {  }
 
@@ -18,7 +18,10 @@ export class ToolTipDirective implements AfterViewInit, OnChanges {
     })
   }
 ngOnChanges(changes:SimpleChanges) {
-    if(changes['appToolTip']){ //content has changed
+    //console.log('inside ng on changes')
+
+    if(changes['tooltipContent']){ //input content has changed
+      //console.log('testing')
       this.updateToolTipContent()
     }
 }
