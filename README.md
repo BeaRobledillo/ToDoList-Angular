@@ -33,6 +33,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 **Estimated time:** 1 sprint of 1 week
 
+## ScreenShot
+
+![alt text](https://github.com/BeitxuelaWEB/ToDoList-Angular/blob/main/src/assets/Captura.PNG)
+
  **Functional requirements:**
 
 - New tasks can be added.
