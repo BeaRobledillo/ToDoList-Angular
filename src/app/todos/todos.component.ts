@@ -1,7 +1,7 @@
+import { EditTodoDialogComponent } from './../edit-todo-dialog/edit-todo-dialog.component';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { EditTodoDialogComponent } from '../edit-todo-dialog/edit-todo-dialog.component';
 import { DataService } from '../shared/data.service';
 import { Todo } from '../shared/todo.model';
 
@@ -13,29 +13,32 @@ import { Todo } from '../shared/todo.model';
 export class TodosComponent implements OnInit {
 
   todos: Todo[]
+  showValidationErrors: boolean | undefined
 
-  constructor( private dataService: DataService, private dialog: MatDialog) { }
+  constructor(private dataService: DataService, private dialog:MatDialog) { }
 
   ngOnInit(): void {
-
     this.todos = this.dataService.getAllTodos()
   }
+  onFormSubmit(form: NgForm) {
 
-  onFormSubmit(form: NgForm){
- 
-    if (form.invalid) return alert("Form is invalid")
+    if (form.invalid) return alert("No es valida")
+    if (form.invalid) return this.showValidationErrors = true
 
     this.dataService.addTodo(new Todo(form.value.text))
 
+    this.showValidationErrors = false
     form.reset()
-
   }
 
-  toggleCompleted(todo: Todo){
-      todo.completed= !todo.completed
+  toggleCompleted(todo: Todo) {
+    todo.completed = !todo.completed;
+
+    //set todo to completed
+    // alert("Todo was clicked. This code is being executed in the TODOS component")
   }
 
-  editTodo(todo: Todo){
+  editTodo(todo: Todo) {
 
     const index = this.todos.indexOf(todo)
 
@@ -45,13 +48,13 @@ export class TodosComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      if (result){
+      if (result) {
         this.dataService.updateTodo(index, result)
+        
       }
-
     })
+    
   }
-
   deleteTodo(todo: Todo) {
 
     const index = this.todos.indexOf(todo)

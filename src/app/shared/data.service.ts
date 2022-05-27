@@ -1,31 +1,32 @@
 import { Injectable } from '@angular/core';
 import { Todo } from './todo.model';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  todos:Todo[] = [
-    new Todo('this is a test!',false),
-    new Todo('Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, id quo qui assumenda perspiciatis saepe enim iste fugiat placeat odit non quidem sapiente excepturi veritatis! Totam hic accusantium quaerat eveniet.',true)
-   
+  todos: Todo[] = [
+    new Todo('Nota 1', false),
+    new Todo('Nota 2', true)
   ]
-
+  
   constructor() { }
 
-  getAllTodos(){
+  getAllTodos() {
     return this.todos
   }
-  addTodo(todo:Todo){
+
+  addTodo(todo: Todo) {
     this.todos.push(todo)
   }
 
-updateTodo(index:number,updatedTodo:Todo){
-  this.todos[index]=updatedTodo
-}
-deleteTodo(index:number ){
-  this.todos.splice(index,)
-}
+  updateTodo(index: number, updatedTodo: Todo) {
+    this.todos[index] = updatedTodo
+  }
 
+  deleteTodo(index: number) {
+    this.todos.splice(index, 1)
+  }
 }

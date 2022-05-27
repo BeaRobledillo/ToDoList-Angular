@@ -1,15 +1,16 @@
 @import '../node_modules/bulma/bulma.sass';
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 
+
 @import 'tippy.js/dist/tippy.css';
 
 html, body { height: 100%; }
-body { margin: 0; }
+body { margin: 0;  background: linear-gradient(to bottom, rgba(238, 50, 8, 0.956),rgba(242, 234, 4, 0.855), rgb(166, 10, 213)); }
 
 
 .alt-gradient-button {
     border: none;
-    background: linear-gradient(to right, rgb(42, 214, 88), rgba(198, 195, 24, 0.808));
+    background: linear-gradient(to right, rgba(238, 50, 8, 0.956), rgb(166, 10, 213));
     color: rgb(0, 0, 0);
     font-weight: 600;
     opacity: 0,92;
