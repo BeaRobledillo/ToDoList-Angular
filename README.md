@@ -1,16 +1,16 @@
-# Todolist
+# Todolist :notebook:
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
 
-## Development server
+## Development server :book:
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Code scaffolding :open_book:
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Build :notebook_with_decorative_cover:
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
@@ -26,7 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-**Project context**
+**Project context** 
 
 > Normally, we use applications to write down tasks that we have to do during projects. This time, instead of using an external application, we will do our own. Also, we will need to store those tasks to check which ones have been completed throughout the week.
 > 
